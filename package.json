@@ -1,0 +1,65 @@
+{
+  "name": "@newfoundcodes/okatana",
+  "version": "1.0.0",
+  "description": "Type-safe TypeScript SDK for the Okatana External API v1.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "resources/openapi.yaml"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"examples/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\" \"examples/**/*.ts\"",
+    "audit": "npm audit",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --sourcemap",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "docs:serve": "mkdocs serve",
+    "docs:build": "mkdocs build --strict",
+    "check:openapi": "vitest run tests/openapi-coverage.test.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.17.2",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "prettier": "^3.9.6",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.68.0",
+    "vitest": "^3.2.4",
+    "yaml": "^2.8.1"
+  },
+  "keywords": [
+    "okatana",
+    "newfoundcodes",
+    "sdk",
+    "typescript",
+    "api-client",
+    "project-management",
+    "kanban"
+  ]
+}
