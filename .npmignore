@@ -1,0 +1,11 @@
+tests/
+examples/
+docs/
+site/
+.github/
+scripts/
+mkdocs.yml
+requirements.txt
+vitest.config.ts
+tsconfig.json
+tsconfig.build.json
