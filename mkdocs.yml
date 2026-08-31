@@ -1,0 +1,107 @@
+site_name: Okatana TypeScript SDK
+site_description: TypeScript SDK for the Okatana External API v1
+site_url: https://okatana.newfoundcodes.com/sdk/typescript/
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  language: en
+  font: false
+  logo: assets/logo-256.png
+  favicon: assets/favicon.ico
+  palette:
+    scheme: default
+    primary: white
+    accent: red
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - navigation.path
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - assets/stylesheets/okatana.css
+
+extra_javascript:
+  - assets/javascripts/okatana.js
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: getting-started/installation.md
+      - Configuration: getting-started/configuration.md
+      - Quickstart: getting-started/quickstart.md
+  - Guides:
+      - Architecture: guides/architecture.md
+      - Authentication and scopes: guides/authentication.md
+      - Models and inputs: guides/models-and-inputs.md
+      - Relationship IDs: guides/relationship-ids.md
+      - Pagination: guides/pagination.md
+      - Errors: guides/errors.md
+      - Retries and idempotency: guides/retries.md
+      - Rate limits: guides/rate-limits.md
+      - Timeouts and cancellation: guides/cancellation.md
+      - Runtime environments: guides/runtime-environments.md
+      - Logging and observability: guides/observability.md
+      - Security: guides/security.md
+      - Low-level client: guides/low-level-client.md
+      - Testing: guides/testing.md
+      - Production checklist: guides/production.md
+      - Upgrading: guides/upgrading.md
+  - API:
+      - Client: api/client.md
+      - Organizations: api/organizations.md
+      - Projects: api/projects.md
+      - Boards: api/boards.md
+      - Tickets: api/tickets.md
+      - Documents: api/documents.md
+  - Real-world use cases:
+      - Overview: use-cases/index.md
+      - CI/CD release: use-cases/ci-cd.md
+      - Incident response: use-cases/incident-response.md
+      - Knowledge publishing: use-cases/documentation.md
+      - External synchronization: use-cases/synchronization.md
+      - Analytics reporting: use-cases/analytics.md
+      - Bulk export: use-cases/export.md
+      - Board consolidation: use-cases/board-migration.md
+      - Release notes: use-cases/release-notes.md
+  - Reference:
+      - Endpoint matrix: reference/endpoint-matrix.md
+      - OpenAPI contract: reference/openapi-contract.md
+      - Public types: reference/types.md
+      - Scope values: reference/scopes.md
+      - Error classes: reference/errors.md
+      - Compatibility policy: reference/compatibility.md
+  - Troubleshooting: troubleshooting.md
