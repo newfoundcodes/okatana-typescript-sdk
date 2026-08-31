@@ -1,6 +1,8 @@
 site_name: Okatana TypeScript SDK
 site_description: TypeScript SDK for the Okatana External API v1
 site_url: https://okatana.newfoundcodes.com/sdk/typescript/
+repo_name: newfoundcodes/okatana-typescript-sdk
+repo_url: https://github.com/newfoundcodes/okatana-typescript-sdk
 
 theme:
   name: material
